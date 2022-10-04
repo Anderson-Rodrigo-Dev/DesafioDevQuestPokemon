@@ -1,32 +1,40 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (url, showPokemons) => {
-  const [data, setData] = useState(null);
+export const useFetch = (offset) => {
+  const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const endpoints = [];
+    setLoading(true);
 
-      setLoading(true);
+    const getPokemon = async (pokemon) => {
+      const res = await fetch(pokemon.url);
+      return await res.json();
+    };
 
-      for (let i = showPokemons - 10; i < showPokemons; i++) {
-        endpoints.push(`${url}/${i}`);
-      }
+    async function loadMorePokemons(offset) {
+      const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/?limit=10&offset=${offset}`
+      );
+      const json = await response.json();
 
-      const promises = endpoints.map(async (endpoint) => {
-        const res = await fetch(endpoint);
-        return await res.json();
-      });
+      return json.results;
+    }
 
-      const results = await Promise.all(promises);
+    async function fetchData () {
+      const pokemonNames = await loadMorePokemons(offset);
+      const pokemonsPromises = pokemonNames.map(
+        async (pokemon) => await getPokemon(pokemon)
+      );
+      const pokemonsData = await Promise.all(pokemonsPromises);
 
-      setData(results);
+      setPokemons([...pokemons, ...pokemonsData]);
 
       setLoading(false);
     };
-    fetchData();
-  }, [url, showPokemons]);
 
-  return { data, loading };
+    fetchData();
+  }, [offset]);
+
+  return { pokemons, loading };
 };

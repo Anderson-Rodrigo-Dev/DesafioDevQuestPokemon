@@ -23,7 +23,6 @@ const Pokemon = () => {
     types.push(pokemon.types.map((type) => type.type.name));
   }
 
-  console.log(types[0]);
   return (
     <>
       <Link to={"/"}>Voltar</Link>
@@ -50,7 +49,6 @@ const Pokemon = () => {
             <p>{pokemon.moves[3].move.name}</p>
             <p>{pokemon.moves[4].move.name}</p>
           </div>
-          <div></div>
         </div>
       )}
     </>

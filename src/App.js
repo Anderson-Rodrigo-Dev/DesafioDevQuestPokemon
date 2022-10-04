@@ -9,11 +9,10 @@ function App() {
       <h1>Pokedex</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Pokemons />}/>
-          <Route path="/pokemon/:id" element={<Pokemon />}/>
+          <Route path="/" element={<Pokemons />} />
+          <Route path="/pokemon/:id" element={<Pokemon />} />
         </Routes>
       </BrowserRouter>
-      
     </div>
   );
 }

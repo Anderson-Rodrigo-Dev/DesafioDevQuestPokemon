@@ -1,60 +1,52 @@
 import "./Pokemons.css";
 
-import { useFetch } from "../components/PokeApi/PokeApi";
 import { Button } from "../components/Button/Button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useFetch } from "../components/PokeApi/PokeApi";
 
 const Pokemons = () => {
-  const url = "https://pokeapi.co/api/v2/pokemon";
-  const [showPokemons, setShowPokemons] = useState(11);
-  const { data: pokemons, loading } = useFetch(url, showPokemons);
+  const [offset, setOffset] = useState(0);
 
-  const handlePrevPokemons = () => {
-    if (showPokemons <= 11) {
-      return;
-    } else {
-      setShowPokemons(showPokemons - 10);
-    }
-  };
+  const { pokemons, loading } = useFetch(offset);
 
   const handleNextPokemons = () => {
-    if (showPokemons >= 151) {
-      return;
-    } else {
-      setShowPokemons(showPokemons + 10);
-    }
+    setOffset(offset + 10);
   };
 
   return (
     <div>
       <h1>Pokemons</h1>
-      {loading && <p>Aguarde um momento</p>}
-      {!loading && (
-        <ul className="pokemon-list">
-          {pokemons &&
-            pokemons.map((pokemon) => (
-              <li key={pokemon.id}>
-                <h2>
-                  #{pokemon.id} - {pokemon.name}
-                </h2>
-                <img src={pokemon.sprites.other.home.front_default} alt="" />
-                <Link to={`/pokemon/${pokemon.id}`}>Detalhes</Link>
-              </li>
-            ))}
-        </ul>
-      )}
+      <ul className="pokemon-list">
+        {pokemons &&
+          pokemons.map((pokemon) => (
+            <li key={pokemon.id}>
+              <h2>
+                #{pokemon.id} - {pokemon.name}
+              </h2>
+              {pokemon.types.length > 1 ? (
+                <p>
+                  {pokemon.types[0].type.name} | {pokemon.types[1].type.name}
+                </p>
+              ) : (
+                <p>{pokemon.types[0].type.name}</p>
+              )}
+              <Link to={`/pokemon/${pokemon.id}`}>
+                <img
+                  src={pokemon.sprites.other.home.front_default}
+                  alt={pokemon.name}
+                />
+              </Link>
+            </li>
+          ))}
+      </ul>
+      {loading && <div className="c-loader"></div>}
       {!loading && (
         <div className="btns">
-          {showPokemons === 11 ? (
-            <Button disabled>Voltar</Button>
+          {offset === 140 ? (
+            <Button disabled>Mostrar mais</Button>
           ) : (
-            <Button onClick={handlePrevPokemons}>Voltar</Button>
-          )}
-          {showPokemons === 151 ? (
-            <Button disabled>Avançar</Button>
-          ) : (
-            <Button onClick={handleNextPokemons}>Avançar</Button>
+            <Button onClick={handleNextPokemons}>Mostrar mais</Button>
           )}
         </div>
       )}

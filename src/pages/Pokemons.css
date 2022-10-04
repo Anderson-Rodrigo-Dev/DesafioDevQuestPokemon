@@ -8,9 +8,11 @@
 .pokemon-list li {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     border: 1px solid #000;
+    border-radius: 40px;
     width: 200px;
-    height: 200px;
+    height: 300px;
     margin: 20px;
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
@@ -35,3 +37,19 @@
     align-items: center;
     justify-content: center;
 }
+
+.c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
