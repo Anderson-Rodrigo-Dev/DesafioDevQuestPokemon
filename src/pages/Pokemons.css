@@ -1,0 +1,37 @@
+.pokemon-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokemon-list li {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pokemon-list li img {
+    margin: 15px auto;
+    width: 100px;
+    background-color: #efefef;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.pokemon-list li img:hover {
+    scale: 1.1;
+}
+
+.btns {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
