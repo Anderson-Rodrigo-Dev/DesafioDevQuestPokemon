@@ -34,6 +34,8 @@ export const useFetch = (offset) => {
     };
 
     fetchData();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset]);
 
   return { pokemons, loading };
