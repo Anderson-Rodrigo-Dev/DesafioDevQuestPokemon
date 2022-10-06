@@ -2,16 +2,13 @@ import * as S from "./Styles/GlobalStyles";
 
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import { ThemeContext } from "./contexts/ThemeContext";
 import Pokemon from "./pages/Pokemon";
 import Pokemons from "./pages/Pokemons";
-import { useContext } from "react";
 import { NotFound } from "./pages/NotFound";
+import { useThemeContext } from "./hooks/useThemeToggler/useThemeContext";
 
 function App() {
-  const { theme } = useContext(ThemeContext);
-
-  console.log(theme);
+  const { theme } = useThemeContext();
 
   return (
     <S.GlobalDefault style={{ backgroundColor: theme.background }}>

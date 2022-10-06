@@ -1,13 +1,13 @@
 import * as S from "./Styles";
 
 import { Button } from "../../components/Button/Button";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useFetch } from "../../components/PokeApi/PokeApi";
-import { ThemeContext } from "../../contexts/ThemeContext";
+import { useFetch } from "../../hooks/PokeApi/usePokeApi";
+import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
 
 const Pokemons = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useThemeContext()
   
   const [offset, setOffset] = useState(0);
 
