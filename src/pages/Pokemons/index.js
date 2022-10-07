@@ -1,17 +1,17 @@
 import * as S from "./Styles";
 
-import { Button } from "../../components/Button/Button";
+import { Button } from "../../components/Buttons/defaultButton/Button"
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useFetch } from "../../hooks/PokeApi/usePokeApi";
+import { PokemonList } from "../../hooks/PokemonList/usePokemonList";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
 
 const Pokemons = () => {
-  const { theme } = useThemeContext()
-  
+  const { theme } = useThemeContext();
+
   const [offset, setOffset] = useState(0);
 
-  const { pokemons, loading } = useFetch(offset);
+  const { pokemons, loading } = PokemonList(offset);
 
   const handleNextPokemons = () => {
     setOffset(offset + 10);
@@ -26,29 +26,17 @@ const Pokemons = () => {
               key={pokemon.id}
               style={{
                 color: theme.color,
-                backgroundImage: theme.linearGradient,
+                backgroundImage: theme.cardGradient,
               }}
             >
               <S.SubTitle style={{ color: theme.color }}>
                 {pokemon.id} - {pokemon.name}
               </S.SubTitle>
-              {/* GAMBIARRA QUE PRETENDO MODIFICAR */}
-              {pokemon.types.length > 1 ? (
-                <div>
-                  <S.Types style={{ color: theme.color }}>
-                    {pokemon.types[0].type.name}
-                  </S.Types>
-                  <S.Types style={{ color: theme.color }}>
-                    {pokemon.types[1].type.name}
-                  </S.Types>
-                </div>
-              ) : (
-                <div>
-                  <S.Types style={{ color: theme.color }}>
-                    {pokemon.types[0].type.name}
-                  </S.Types>
-                </div>
-              )}
+              <div>
+                {pokemon.types.map((type, index) => (
+                  <S.Types key={index}>{type.type.name}</S.Types>
+                ))}
+              </div>
               <Link to={`/pokemon/${pokemon.id}`}>
                 <S.Image
                   src={pokemon.sprites.other.home.front_default}
@@ -59,7 +47,17 @@ const Pokemons = () => {
           ))}
       </S.UnordeList>
       {loading && <S.Rotate></S.Rotate>}
-      {!loading && <Button onClick={handleNextPokemons}>Mostrar mais</Button>}
+      {!loading && (
+        <Button
+          onClick={handleNextPokemons}
+          style={{
+            color: theme.buttonColor,
+            background: theme.buttonBackground,
+          }}
+        >
+          Mostrar mais
+        </Button>
+      )}
     </div>
   );
 };

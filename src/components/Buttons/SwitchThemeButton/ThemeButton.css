@@ -1,0 +1,44 @@
+#checkbox{
+    display: none;
+}
+
+.toggler {
+    display: block;
+    width: 60px;
+    height: 31px;
+    background: #75B4FF;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ball,
+.sun,
+.moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ball {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #1D0D50;
+    border-radius: 50%;
+    left: 1px;
+    z-index: 10;
+    transition: transform .2s ease-in-out;
+}
+
+.sun {
+    right: 5px;
+}
+
+.moon {
+    left: 5px;
+}
+
+#checkbox:checked + .ball {
+    transform: translate(29px, -50%);
+}

@@ -1,58 +1,64 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import * as S from "./Styles";
+
+import { useParams } from "react-router-dom";
+import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
+import { PokemonInfo } from "../../hooks/PokemonInfo/getPokemonInfo";
+import { Ability } from "../../components/Ability/Ability";
 
 const Pokemon = () => {
   let { id } = useParams();
-  const [pokemon, setPokemon] = useState(null);
-  const types = [];
-
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(url);
-      const json = await res.json();
+  const { theme } = useThemeContext();
+  const { pokemon } = PokemonInfo(url);
 
-      setPokemon(json);
-    };
-    fetchData();
-  }, [url]);
-
-  //GAMBIARRAS
-  if (pokemon) {
-    types.push(pokemon.types.map((type) => type.type.name));
-  }
-
-  id = parseInt(id);
   return (
     <>
-      <Link to={`/pokemon/${id - 1}`}>Voltar</Link>
-      <Link to={`/pokemon/${id + 1}`}>Voltar</Link>
       {pokemon && (
-        <div>
-          <p>
-            {pokemon.id} - {pokemon.name}
-          </p>
+        <S.ContainerPokemon
+          style={{
+            color: theme.color,
+            backgroundImage: theme.cardGradient,
+          }}
+        >
+          <S.ContainerName>
+            <S.Title2 style={{ color: theme.color }}>
+              {pokemon.id} - {pokemon.name}
+            </S.Title2>
+            <div>
+              {pokemon.types.map((type, index) => (
+                <S.Types key={index}>{type.type.name}</S.Types>
+              ))}
+            </div>
+          </S.ContainerName>
 
-          <div>
-            {pokemon.types.map((type, index) => (
-              <span key={index}>{type.type.name}</span>
-            ))}
-            {/* <S.Types>{pokemon.types[1]?.type.name}</S.Types> */}
-          </div>
+          <S.ContainerImageAndDetails>
+            <S.Image
+              src={pokemon.sprites.other.home.front_default}
+              alt={pokemon.name}
+            />
 
-          <img
-            src={pokemon.sprites.other.home.front_default}
-            alt={pokemon.name}
-          />
-          <div>
-            <h2>Movimentos</h2>
+            <S.DetailsContainer>
+              <S.Title3 style={{ color: theme.color }}>Abilities</S.Title3>
+              <S.MovesDetails className="abilities-list">
+                {pokemon.abilities.map((pokemon, index) => {
+                  return <Ability pokemon={pokemon} key={index} />;
+                })}
+              </S.MovesDetails>
 
-            {pokemon.moves.slice(0, 4).map((move, index) => {
-              return <p key={index}>{move.move.name}</p>;
-            })}
-          </div>
-        </div>
+              <S.Title3 style={{ color: theme.color }}>Moves</S.Title3>
+              <S.MovesDetails>
+                {pokemon.moves.map((move, index) => {
+                  return (
+                    <S.Text key={index} style={{ color: theme.color }}>
+                      {move.move.name}
+                    </S.Text>
+                  );
+                })}
+              </S.MovesDetails>
+            </S.DetailsContainer>
+          </S.ContainerImageAndDetails>
+        </S.ContainerPokemon>
       )}
     </>
   );

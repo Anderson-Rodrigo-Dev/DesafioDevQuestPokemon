@@ -1,23 +1,21 @@
 import { themes } from "../../contexts/styles";
-import { Button } from "../Button/Button";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
+import ThemeButton from "../Buttons/SwitchThemeButton/ThemeButton";
 
 export const ThemeTogglerButton = () => {
-  const { theme, setTheme } = useThemeContext()
+  const { theme, setTheme } = useThemeContext();
 
   return (
     <div>
-      <Button
-        onClick={() =>
+      <ThemeButton
+        onChange={() =>
           setTheme(theme === themes.light ? themes.dark : themes.light)
         }
         style={{
-          color: theme.buttonColor,
-          backgroundColor: theme.buttonBackground,
+          color: theme.color,
+          backgroundColor: theme.background,
         }}
-      >
-        Alterar modo
-      </Button>
+      />
     </div>
   );
 };

@@ -1,58 +1,37 @@
 import styled from "styled-components";
 
-export const UnordeList = styled.ul`
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-`;
-
-export const List = styled.li`
+export const ContainerPokemon = styled.div`
   background: linear-gradient(to bottom, #1d0d50 0%, #5c33a7 100%);
   border-radius: 40px;
-  color: #000;
   display: flex;
   flex-direction: column;
-  font-family: Helvetica, sans-serif;
-  height: 250px;
-  justify-content: space-around;
-  margin: 20px;
-  padding: 10px;
-  width: 220px;
+  max-width: 980px;
+  margin: 40px auto;
 `;
 
-export const SubTitle = styled.h2`
-  color: #fff;
-  margin-top: 20px;
+export const ContainerName = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 60px 0;
 `;
 
 export const Image = styled.img`
-  filter: drop-shadow(10px 10px 10px #000);
-  margin: 15px auto;
-  transition: 0.2s ease-in-out;
-  width: 130px;
-
-  &:hover {
-    scale: 1.3;
-  }
+  max-width: 360px;
 `;
 
-export const Rotate = styled.div`
-  animation: rotate 1s infinite;
-  border: 6px solid #e5e5e5;
-  border-radius: 50%;
-  border-top-color: #5321b1;
-  height: 50px;
-  margin: 0 auto;
-  width: 50px;
+export const Title2 = styled.h2`
+  color: #fff;
+  font-weight: bold;
+  font-size: 3rem;
+`;
 
-  @keyframes rotate {
-  to {
-    transform: rotate(1turn);
-  }
-}
-`
+export const Title3 = styled.h3`
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 15px 0;
+`;
 
 export const Types = styled.span`
   background-color: ${(props) =>
@@ -95,5 +74,36 @@ export const Types = styled.span`
   border-radius: 5px;
   color: #000;
   margin: 0 5px;
+  margin-left: 30px;
   padding: 2px 20px;
+`;
+
+export const ContainerImageAndDetails = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+`;
+
+export const DetailsContainer = styled.div`
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 0;
+`;
+
+export const MovesDetails = styled.ul`
+  display: flex;
+  ${"" /* flex-direction: column; */}
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  text-align: start;
+  height: 80px;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+export const Text = styled.li`
+  width: 100px;
+  color: white;
 `;

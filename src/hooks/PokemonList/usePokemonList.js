@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (offset) => {
+export const PokemonList = (offset) => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(false);
 

@@ -11,16 +11,22 @@ function App() {
   const { theme } = useThemeContext();
 
   return (
-    <S.GlobalDefault style={{ backgroundColor: theme.background }}>
+    <S.GlobalDefault style={{ background: theme.background }}>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Pokemons />} />
           <Route path="/pokemon/:id" element={<Pokemon />} />
           <Route path="/Error_404" element={<NotFound />} />
-          <Route path="/pokemon/0" element={<Navigate replace to={"/Error_404"}/>}/>
-          <Route path="/pokemon/906" element={<Navigate replace to={"/Error_404"}/>}/>
-          <Route path="*" element={<Navigate replace to={"/Error_404"}/>} />
+          <Route
+            path="/pokemon/0"
+            element={<Navigate replace to={"/Error_404"} />}
+          />
+          <Route
+            path="/pokemon/906"
+            element={<Navigate replace to={"/Error_404"} />}
+          />
+          <Route path="*" element={<Navigate replace to={"/Error_404"} />} />
         </Routes>
       </BrowserRouter>
     </S.GlobalDefault>
