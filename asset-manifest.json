@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/github-page/static/css/main.477d6a4c.css",
-    "main.js": "/github-page/static/js/main.6a352eaf.js",
-    "static/js/787.570683c3.chunk.js": "/github-page/static/js/787.570683c3.chunk.js",
-    "static/media/Pokemonlogo.png": "/github-page/static/media/Pokemonlogo.df1fd31f6c8961789913.png",
-    "index.html": "/github-page/index.html",
-    "main.477d6a4c.css.map": "/github-page/static/css/main.477d6a4c.css.map",
-    "main.6a352eaf.js.map": "/github-page/static/js/main.6a352eaf.js.map",
-    "787.570683c3.chunk.js.map": "/github-page/static/js/787.570683c3.chunk.js.map"
+    "main.css": "/DesafioDevQuestPokemon/static/css/main.477d6a4c.css",
+    "main.js": "/DesafioDevQuestPokemon/static/js/main.f7756261.js",
+    "static/js/787.570683c3.chunk.js": "/DesafioDevQuestPokemon/static/js/787.570683c3.chunk.js",
+    "static/media/Pokemonlogo.png": "/DesafioDevQuestPokemon/static/media/Pokemonlogo.df1fd31f6c8961789913.png",
+    "index.html": "/DesafioDevQuestPokemon/index.html",
+    "main.477d6a4c.css.map": "/DesafioDevQuestPokemon/static/css/main.477d6a4c.css.map",
+    "main.f7756261.js.map": "/DesafioDevQuestPokemon/static/js/main.f7756261.js.map",
+    "787.570683c3.chunk.js.map": "/DesafioDevQuestPokemon/static/js/787.570683c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.477d6a4c.css",
-    "static/js/main.6a352eaf.js"
+    "static/js/main.f7756261.js"
   ]
 }
