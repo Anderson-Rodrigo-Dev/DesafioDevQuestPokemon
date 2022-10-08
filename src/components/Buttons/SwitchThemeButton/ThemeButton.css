@@ -22,11 +22,11 @@
 
 .ball {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 33px;
+    height: 33px;
     background-color: #1D0D50;
     border-radius: 50%;
-    left: 1px;
+    left: -1px;
     z-index: 10;
     transition: transform .2s ease-in-out;
 }

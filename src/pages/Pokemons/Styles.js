@@ -24,7 +24,7 @@ export const List = styled.li`
 
 export const SubTitle = styled.h2`
   color: #fff;
-  margin-top: 20px;
+  margin: 20px 0;
 `;
 
 export const Image = styled.img`
