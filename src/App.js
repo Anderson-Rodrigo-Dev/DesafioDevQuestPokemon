@@ -12,7 +12,7 @@ function App() {
 
   return (
     <S.GlobalDefault style={{ background: theme.background }}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header />
         <Routes>
           <Route path="/" element={<Pokemons />} />
