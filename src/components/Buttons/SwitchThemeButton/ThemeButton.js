@@ -1,6 +1,6 @@
 import "./ThemeButton.css";
 
-import { FaSun, FaMoon } from "react-icons/fa";
+import * as FaIcon from "react-icons/fa";
 
 const ThemeButton = (props) => {
 
@@ -8,8 +8,8 @@ const ThemeButton = (props) => {
     <label htmlFor="checkbox" className="toggler">
       <input type="checkbox" id="checkbox" {...props}/>
       <span className="ball"></span>
-      <FaSun className="sun" />
-      <FaMoon className="moon" />
+      <FaIcon.FaSun className="sun" />
+      <FaIcon.FaMoon className="moon" />
     </label>
   );
 };
