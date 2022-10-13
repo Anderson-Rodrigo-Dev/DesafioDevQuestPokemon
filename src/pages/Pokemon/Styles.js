@@ -61,7 +61,7 @@ export const ContainerPokemon = styled.div`
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  max-width: 980px;
+  width: 80%;
   margin: 40px auto;
 `;
 
@@ -154,7 +154,7 @@ export const ContainerImageAndDetails = styled.div`
 `;
 
 export const DetailsContainer = styled.div`
-  width: 600px;
+  width: 80%;
   margin: 0 auto;
 `;
 
