@@ -6,6 +6,7 @@ export const UnordeList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+
 `;
 
 export const List = styled.li`
@@ -15,7 +16,7 @@ export const List = styled.li`
   display: flex;
   flex-direction: column;
   font-family: Helvetica, sans-serif;
-  height: 250px;
+  height: 270px;
   justify-content: space-around;
   margin: 20px;
   padding: 10px;
@@ -25,6 +26,7 @@ export const List = styled.li`
 export const SubTitle = styled.h2`
   color: #fff;
   margin: 20px 0;
+  font-size: 2.6rem;
 `;
 
 export const Image = styled.img`
@@ -96,4 +98,5 @@ export const Types = styled.span`
   color: #000;
   margin: 0 5px;
   padding: 2px 20px;
+  font-size: 1.6rem;
 `;

@@ -1,6 +1,6 @@
 import * as S from "./Styles";
 
-import { Button } from "../../components/Buttons/defaultButton/Button"
+import { Button } from "../../components/Buttons/defaultButton/Button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PokemonList } from "../../hooks/PokemonList/usePokemonList";

@@ -15,6 +15,7 @@
 .ball,
 .sun,
 .moon {
+    font-size: 2rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -27,7 +28,7 @@
     background-color: #1D0D50;
     border-radius: 50%;
     left: -1px;
-    z-index: 10;
+    z-index: 1;
     transition: transform .2s ease-in-out;
 }
 
@@ -37,6 +38,7 @@
 
 .moon {
     left: 5px;
+    color: #1D0D50;
 }
 
 #checkbox:checked + .ball {

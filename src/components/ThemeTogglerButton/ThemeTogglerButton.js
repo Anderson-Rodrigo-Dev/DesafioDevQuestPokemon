@@ -6,7 +6,7 @@ export const ThemeTogglerButton = () => {
   const { theme, setTheme } = useThemeContext();
 
   return (
-    <div>
+    <div style={{marginRight: "2rem"}}>
       <ThemeButton
         onChange={() =>
           setTheme(theme === themes.light ? themes.dark : themes.light)

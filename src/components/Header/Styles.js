@@ -1,22 +1,9 @@
 import styled from "styled-components";
 
-export const Header = styled.div`
-  background: linear-gradient(
-    180deg,
-    rgba(117, 180, 255, 0.8) 0%,
-    rgba(117, 180, 255, 0) 100%
-  );
-  ${
-    "" /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  }
-`;
-
 export const Logo = styled.img`
   margin: 30px;
-  max-width: 300px;
+  max-width: 550px;
+  filter: drop-shadow(4px 4px 6px #493882)
 `;
 
 export const ThemeButton = styled.div`

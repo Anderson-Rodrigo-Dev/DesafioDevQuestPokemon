@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const PokemonInfo = (url) => {
+  
   const [pokemon, setPokemon] = useState();
   useEffect(() => {
     const fetchData = async () => {
@@ -11,6 +12,7 @@ export const PokemonInfo = (url) => {
     };
 
     fetchData();
+    console.log(pokemon)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);

@@ -6,6 +6,7 @@ import Pokemon from "./pages/Pokemon";
 import Pokemons from "./pages/Pokemons";
 import { NotFound } from "./pages/NotFound";
 import { useThemeContext } from "./hooks/useThemeToggler/useThemeContext";
+import TypePage from "./pages/Types";
 
 function App() {
   const { theme } = useThemeContext();
@@ -13,10 +14,11 @@ function App() {
   return (
     <S.GlobalDefault style={{ background: theme.background }}>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Header />
+      <Header />
         <Routes>
           <Route path="/" element={<Pokemons />} />
           <Route path="/pokemon/:id" element={<Pokemon />} />
+          <Route path="/pokemons/:type" element={<TypePage />} />
           <Route path="/Error_404" element={<NotFound />} />
           <Route
             path="/pokemon/0"
