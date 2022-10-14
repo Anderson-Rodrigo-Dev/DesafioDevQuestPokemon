@@ -47,8 +47,9 @@ export const BarraStatus = styled.div`
     width:200px;
   }
 
-  @media(max-width: 420px){
+  @media(max-width: 425px){
     display: none;
+    text-align:start;
   }
 `;
 export const BarraHP = styled.div`
@@ -125,11 +126,14 @@ export const Image = styled.img`
 export const Title2 = styled.h2`
   color: #fff;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 30px;
 
-  @media (max-width: 1000px){
-    font-size: 4rem
+  @media(max-width: 510px){
+    font-size: 3rem;
+  }
+  @media(max-width: 440px){
+    font-size: 2rem;
   }
 `;
 
