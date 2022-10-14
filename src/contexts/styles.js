@@ -13,7 +13,7 @@ export const themes = {
       color: "#F3F8FF",
       background: "#100536",
       cardGradient: "linear-gradient(to bottom, #1d0d50 0%, #5c33a7 80%)",
-      buttonColor: '#ffffff',
+      buttonColor: '#B3D6e0',
       buttonBackground: '#5c33a7',
       sidebarBackground: "#493882",
       sidebarNavBackground: "#32206B"

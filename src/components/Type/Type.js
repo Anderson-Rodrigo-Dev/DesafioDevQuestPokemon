@@ -18,7 +18,6 @@ const Type = ({ pokemon, index }) => {
     fetchType();
   }, [pokemon.pokemon.url]);
 
-  console.log(pokemons);
   return (
     <>
       {pokemons && (

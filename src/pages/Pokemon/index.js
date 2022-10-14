@@ -27,7 +27,7 @@ const Pokemon = () => {
             </S.Title2>
             <div>
               {pokemon.types.map((type, index) => (
-                <S.Types key={index} style={{ color: theme.color }}>{type.type.name}</S.Types>
+                <S.Types key={index}>{type.type.name}</S.Types>
               ))}
             </div>
           </S.ContainerName>
@@ -79,7 +79,7 @@ const Pokemon = () => {
           
           <S.DetailsContainer>
             <S.Title3 style={{ color: theme.color }}>Abilities</S.Title3>
-            <S.MovesDetails className="abilities-list">
+            <S.MovesDetails>
               {pokemon.abilities.map((pokemon, index) => {
                 return <Ability pokemon={pokemon} key={index} />;
               })}

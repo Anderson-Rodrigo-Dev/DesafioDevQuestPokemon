@@ -51,7 +51,6 @@ const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const { theme } = useThemeContext();
-  console.log(theme)
 
   const showSidebar = () => setSidebar(!sidebar);
 

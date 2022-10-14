@@ -38,7 +38,6 @@
 
 .moon {
     left: 5px;
-    color: #1D0D50;
 }
 
 #checkbox:checked + .ball {

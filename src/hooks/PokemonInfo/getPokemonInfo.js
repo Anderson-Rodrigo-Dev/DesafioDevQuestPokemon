@@ -12,7 +12,6 @@ export const PokemonInfo = (url) => {
     };
 
     fetchData();
-    console.log(pokemon)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);

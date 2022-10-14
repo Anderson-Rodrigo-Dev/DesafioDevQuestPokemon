@@ -3,14 +3,38 @@ import styled from "styled-components";
 export const StatusContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 0 60px;
+  width: 550px;
+  margin: 10px auto;
+
+  @media(max-width: 1300px){
+    margin: 0 auto;
+    width: 300px
+  }
+
+  @media (max-width: 1000px){
+  align-items: center;
+}
+
+  @media(max-width: 425px){
+    width:80%;
+  }
 `;
 
 export const StatusInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+@media (max-width: 1300px){
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px auto;
+}
+
+@media(max-width: 425px){
+  align-items: center;
+  justify-content: center;
+}
 `;
 
 export const BarraStatus = styled.div`
@@ -18,6 +42,14 @@ export const BarraStatus = styled.div`
   height: 15px;
   border: 1px solid #000;
   border-radius: 8px;
+
+  @media(max-width: 500px){
+    width:200px;
+  }
+
+  @media(max-width: 420px){
+    display: none;
+  }
 `;
 export const BarraHP = styled.div`
   width: ${(props) => Math.ceil((props.HP / 255) * 100)}%;
@@ -61,6 +93,7 @@ export const ContainerPokemon = styled.div`
   border-radius: 40px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 80%;
   margin: 40px auto;
 `;
@@ -70,17 +103,34 @@ export const ContainerName = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 30px 60px 0;
+  max-width: 600px;
+
+  @media (max-width: 1000px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Image = styled.img`
-  max-width: 360px;
+  width: 40%;
   margin: 0 20px;
+
+  @media (max-width: 1000px){
+    width: 80%;
+    margin: 0 auto
+  }
 `;
 
 export const Title2 = styled.h2`
   color: #fff;
   font-weight: bold;
   font-size: 3rem;
+  margin: 30px;
+
+  @media (max-width: 1000px){
+    font-size: 4rem
+  }
 `;
 
 export const Title3 = styled.h3`
@@ -144,13 +194,27 @@ export const Types = styled.span`
   margin: 0 5px;
   margin-left: 30px;
   padding: 2px 20px;
+
+  @media (max-width: 1000px){
+    margin: 0 10px;
+  }
 `;
 
 export const ContainerImageAndDetails = styled.div`
   display: flex;
+  width: 80%;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 30px;
+
+  @media (max-width: 1300px){
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const DetailsContainer = styled.div`
@@ -168,7 +232,7 @@ export const MovesDetails = styled.ul`
 `;
 
 export const Text = styled.li`
-  width: 150px;
+  width: 120px;
   color: white;
   font-size: 1.6rem;
 `;

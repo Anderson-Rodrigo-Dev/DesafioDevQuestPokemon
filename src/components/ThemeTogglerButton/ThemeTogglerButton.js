@@ -5,6 +5,7 @@ import ThemeButton from "../Buttons/SwitchThemeButton/ThemeButton";
 export const ThemeTogglerButton = () => {
   const { theme, setTheme } = useThemeContext();
 
+
   return (
     <div style={{marginRight: "2rem"}}>
       <ThemeButton
