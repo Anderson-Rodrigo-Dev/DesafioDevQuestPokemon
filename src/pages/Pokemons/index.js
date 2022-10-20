@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from "./Styles";
 
 import { Button } from "../../components/Buttons/defaultButton/Button";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import * as S from "../Pokemons/styles";
+import * as S from "../Pokemons/Styles";
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

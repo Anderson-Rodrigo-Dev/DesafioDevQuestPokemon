@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from "./Styles";
 
 import { useParams } from "react-router-dom";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
