@@ -10,7 +10,6 @@ const Pokemons = () => {
   const { theme } = useThemeContext();
 
   const [offset, setOffset] = useState(0);
-
   const { pokemons, loading } = PokemonList(offset);
 
   const handleNextPokemons = () => {
