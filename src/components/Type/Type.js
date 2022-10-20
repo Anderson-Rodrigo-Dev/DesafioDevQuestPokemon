@@ -1,4 +1,4 @@
-import * as S from "../../pages/Pokemons/styles";
+import * as S from "../../pages/Pokemons/Styles";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
