@@ -1,6 +1,6 @@
 import * as S from "./Styles";
 
-import PokemonLogo from "../../images/Pokemonlogo.png";
+import PokemonLogo from "../../assets/images/Pokemonlogo.png";
 import Sidebar from "../SideBar/Sidebar";
 import { Link } from "react-router-dom";
 

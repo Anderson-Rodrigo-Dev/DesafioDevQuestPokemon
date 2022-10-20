@@ -38,5 +38,5 @@ export const PokemonList = (offset) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset]);
 
-  return { pokemons, loading };
+  return { pokemons, setPokemons, loading };
 };

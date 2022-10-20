@@ -11,6 +11,7 @@ import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { ThemeTogglerButton } from "../ThemeTogglerButton/ThemeTogglerButton";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
+import Search from "../Search/Search";
 
 const Nav = styled.div`
   align-items: center;
@@ -33,14 +34,19 @@ const NavIcon = styled(Link)`
 const SidebarNav = styled.nav`
   background: #32206b;
   width: 250px;
-  height: 100vh;
+  height: 100%;
   display: flex;
+  position: fixed;
   justify-content: center;
-  position: absolute;
+  overflow-y: auto;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 350ms;
   z-index: 10;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const SidebarWrap = styled.div`
@@ -49,7 +55,6 @@ const SidebarWrap = styled.div`
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
-
   const { theme } = useThemeContext();
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -57,14 +62,17 @@ const Sidebar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav style={{background: theme.sidebarBackground}}>
+        <Nav style={{ background: theme.sidebarBackground }}>
           <NavIcon to="#">
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
-
+          <Search />
           <ThemeTogglerButton />
         </Nav>
-        <SidebarNav sidebar={sidebar} style={{background: theme.sidebarNavBackground}}>
+        <SidebarNav
+          sidebar={sidebar}
+          style={{ background: theme.sidebarNavBackground }}
+        >
           <SidebarWrap>
             <NavIcon to="#">
               <AiIcons.AiOutlineClose onClick={showSidebar} />

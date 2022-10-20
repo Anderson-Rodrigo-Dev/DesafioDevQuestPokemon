@@ -2,7 +2,7 @@ import * as S from "./Styles";
 
 import { useParams } from "react-router-dom";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
-import { PokemonInfo } from "../../hooks/PokemonInfo/getPokemonInfo";
+import { GetPokemonInfo } from "../../hooks/PokemonInfo/getPokemonInfo";
 import { Ability } from "../../components/Ability/Ability";
 
 const Pokemon = () => {
@@ -10,7 +10,7 @@ const Pokemon = () => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
   const { theme } = useThemeContext();
-  const { pokemon } = PokemonInfo(url);
+  const { pokemon } = GetPokemonInfo(url);
 
   return (
     <>

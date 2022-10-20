@@ -4,24 +4,24 @@ import * as AiIcons from "react-icons/ai";
 import * as RiIcons from "react-icons/ri";
 import * as MdIcons from 'react-icons/md';
 
-import Iconbug from "../../icons/bug.svg"
-import Icondark from "../../icons/dark.svg"
-import Icondragon from "../../icons/dragon.svg"
-import Iconelectric from "../../icons/electric.svg"
-import Iconfairy from "../../icons/fairy.svg"
-import Iconfighting from "../../icons/fighting.svg"
-import Iconfire from "../../icons/fire.svg";
-import Iconflying from "../../icons/flying.svg"
-import Iconghost from "../../icons/ghost.svg"
-import Icongrass from "../../icons/grass.svg"
-import Iconground from "../../icons/ground.svg"
-import Iconice from "../../icons/ice.svg"
-import Iconnormal from "../../icons/normal.svg"
-import Iconpoison from "../../icons/poison.svg"
-import Iconpsychic from "../../icons/psychic.svg"
-import Iconrock from "../../icons/rock.svg"
-import Iconsteel from "../../icons/steel.svg"
-import Iconwater from "../../icons/water.svg"
+import Iconbug from "../../assets/icons/bug.svg"
+import Icondark from "../../assets/icons/dark.svg"
+import Icondragon from "../../assets/icons/dragon.svg"
+import Iconelectric from "../../assets/icons/electric.svg"
+import Iconfairy from "../../assets/icons/fairy.svg"
+import Iconfighting from "../../assets/icons/fighting.svg"
+import Iconfire from "../../assets/icons/fire.svg";
+import Iconflying from "../../assets/icons/flying.svg"
+import Iconghost from "../../assets/icons/ghost.svg"
+import Icongrass from "../../assets/icons/grass.svg"
+import Iconground from "../../assets/icons/ground.svg"
+import Iconice from "../../assets/icons/ice.svg"
+import Iconnormal from "../../assets/icons/normal.svg"
+import Iconpoison from "../../assets/icons/poison.svg"
+import Iconpsychic from "../../assets/icons/psychic.svg"
+import Iconrock from "../../assets/icons/rock.svg"
+import Iconsteel from "../../assets/icons/steel.svg"
+import Iconwater from "../../assets/icons/water.svg"
 
 
 export const SidebarData = [
