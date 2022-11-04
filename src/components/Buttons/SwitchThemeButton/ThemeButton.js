@@ -7,8 +7,6 @@ const ThemeButton = (props) => {
 
   const {theme} = useThemeContext()
 
-  console.log(theme)
-
   return (
     <label htmlFor="checkbox" className="toggler">
       <input type="checkbox" id="checkbox" {...props}/>

@@ -21,22 +21,23 @@ export const PokemonList = (offset) => {
       return json.results;
     }
 
-    async function fetchData () {
+    async function fetchData() {
       const pokemonNames = await loadMorePokemons(offset);
       const pokemonsPromises = pokemonNames.map(
         async (pokemon) => await getPokemon(pokemon)
       );
+
       const pokemonsData = await Promise.all(pokemonsPromises);
 
       setPokemons([...pokemons, ...pokemonsData]);
 
       setLoading(false);
-    };
+    }
 
     fetchData();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset]);
 
-  return { pokemons, setPokemons, loading };
+  return { pokemons, loading };
 };

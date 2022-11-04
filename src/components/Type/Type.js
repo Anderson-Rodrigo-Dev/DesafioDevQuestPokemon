@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
 
-const Type = ({ pokemon, index }) => {
+const Type = ({ pokemon }) => {
   const { theme } = useThemeContext();
   const [pokemons, setPokemons] = useState();
 

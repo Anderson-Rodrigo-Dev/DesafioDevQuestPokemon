@@ -7,6 +7,7 @@ const Search = () => {
 
   const [search, setSearch] = useState("");
 
+  console.log(search)
   const handleSearch = (e) => {
     e.preventDefault();
 
@@ -14,11 +15,15 @@ const Search = () => {
   };
 
   const searchPokemon = async () => {
-    const url = `https://pokeapi.co/api/v2/pokemon/${search}`;
+    const name = search.toLowerCase()
+
+    console.log(name)
+
+    const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
     const res = await fetch(url);
 
     if (res.status !== 404) {
-      navigate(`/pokemon/${search}`);
+      navigate(`/pokemon/${name}`);
     } else {
       navigate("/Error_404");
     }
@@ -31,7 +36,7 @@ const Search = () => {
       <input
         style={{ width: "300px", height: "30px", fontSize: "2rem" }}
         type="search"
-        placeholder="Pesquisar"
+        placeholder="search"
         onChange={(e) => setSearch(e.target.value)}
         value={search}
       />

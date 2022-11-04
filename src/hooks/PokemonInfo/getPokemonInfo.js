@@ -10,10 +10,9 @@ export const GetPokemonInfo = (url) => {
 
       setPokemon(json);
     };
-    
+
     fetchData();
-    
-    console.log(pokemon)
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
