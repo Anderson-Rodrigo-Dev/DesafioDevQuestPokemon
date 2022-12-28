@@ -11,7 +11,6 @@ import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { ThemeTogglerButton } from "../ThemeTogglerButton/ThemeTogglerButton";
 import { useThemeContext } from "../../hooks/useThemeToggler/useThemeContext";
-import Search from "../Search/Search";
 
 const Nav = styled.div`
   align-items: center;
@@ -66,7 +65,6 @@ const Sidebar = () => {
           <NavIcon to="#">
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
-          <Search />
           <ThemeTogglerButton />
         </Nav>
         <SidebarNav

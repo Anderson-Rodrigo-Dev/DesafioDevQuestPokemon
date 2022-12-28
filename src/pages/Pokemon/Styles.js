@@ -6,17 +6,17 @@ export const StatusContainer = styled.div`
   width: 550px;
   margin: 10px auto;
 
-  @media(max-width: 1300px){
+  @media (max-width: 1300px) {
     margin: 0 auto;
-    width: 300px
+    width: 300px;
   }
 
-  @media (max-width: 1000px){
-  align-items: center;
-}
+  @media (max-width: 1000px) {
+    align-items: center;
+  }
 
-  @media(max-width: 425px){
-    width:80%;
+  @media (max-width: 425px) {
+    width: 80%;
   }
 `;
 
@@ -25,16 +25,16 @@ export const StatusInfo = styled.div`
   justify-content: space-between;
   align-items: center;
 
-@media (max-width: 1300px){
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 10px auto;
-}
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px auto;
+  }
 
-@media(max-width: 425px){
-  align-items: center;
-  justify-content: center;
-}
+  @media (max-width: 425px) {
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const BarraStatus = styled.div`
@@ -43,13 +43,13 @@ export const BarraStatus = styled.div`
   border: 1px solid #000;
   border-radius: 8px;
 
-  @media(max-width: 500px){
-    width:200px;
+  @media (max-width: 500px) {
+    width: 200px;
   }
 
-  @media(max-width: 425px){
+  @media (max-width: 425px) {
     display: none;
-    text-align:start;
+    text-align: start;
   }
 `;
 export const BarraHP = styled.div`
@@ -106,7 +106,7 @@ export const ContainerName = styled.div`
   margin: 30px 60px 0;
   max-width: 600px;
 
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -117,9 +117,9 @@ export const Image = styled.img`
   width: 40%;
   margin: 0 20px;
 
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     width: 80%;
-    margin: 0 auto
+    margin: 0 auto;
   }
 `;
 
@@ -129,10 +129,10 @@ export const Title2 = styled.h2`
   font-size: 4rem;
   margin: 30px;
 
-  @media(max-width: 510px){
+  @media (max-width: 510px) {
     font-size: 3rem;
   }
-  @media(max-width: 440px){
+  @media (max-width: 440px) {
     font-size: 2rem;
   }
 `;
@@ -199,7 +199,7 @@ export const Types = styled.span`
   margin-left: 30px;
   padding: 2px 20px;
 
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     margin: 0 10px;
   }
 `;
@@ -211,7 +211,7 @@ export const ContainerImageAndDetails = styled.div`
   align-items: center;
   margin-bottom: 30px;
 
-  @media (max-width: 1300px){
+  @media (max-width: 1300px) {
     justify-content: center;
     align-items: center;
   }
@@ -231,12 +231,13 @@ export const MovesDetails = styled.ul`
   flex-wrap: wrap;
   text-align: start;
   width: 100%;
-  justify-content: space-between;
-  margin-bottom: 60px;
-`;
+  margin: 0 auto;
+  padding: 30px;
+  `;
 
 export const Text = styled.li`
-  width: 120px;
+width: 120px;
   color: white;
   font-size: 1.6rem;
+  margin-right: 20px;
 `;
