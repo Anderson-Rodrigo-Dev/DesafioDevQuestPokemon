@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DesafioDevQuestPokemon/static/css/main.cae5e166.css",
-    "main.js": "/DesafioDevQuestPokemon/static/js/main.870da827.js",
+    "main.js": "/DesafioDevQuestPokemon/static/js/main.9b5faec8.js",
     "static/js/787.570683c3.chunk.js": "/DesafioDevQuestPokemon/static/js/787.570683c3.chunk.js",
     "static/media/Pokemonlogo.png": "/DesafioDevQuestPokemon/static/media/Pokemonlogo.df1fd31f6c8961789913.png",
     "static/media/dragon.svg": "/DesafioDevQuestPokemon/static/media/dragon.9d32757b191cbbaea8d4d418ff5d4ed3.svg",
@@ -24,11 +24,11 @@
     "static/media/grass.svg": "/DesafioDevQuestPokemon/static/media/grass.e09623e3345d5bf5286f5323dd923c60.svg",
     "static/media/normal.svg": "/DesafioDevQuestPokemon/static/media/normal.2ba66dd583ebf70eb414a0cfd20a48be.svg",
     "main.cae5e166.css.map": "/DesafioDevQuestPokemon/static/css/main.cae5e166.css.map",
-    "main.870da827.js.map": "/DesafioDevQuestPokemon/static/js/main.870da827.js.map",
+    "main.9b5faec8.js.map": "/DesafioDevQuestPokemon/static/js/main.9b5faec8.js.map",
     "787.570683c3.chunk.js.map": "/DesafioDevQuestPokemon/static/js/787.570683c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cae5e166.css",
-    "static/js/main.870da827.js"
+    "static/js/main.9b5faec8.js"
   ]
 }
